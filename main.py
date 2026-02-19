@@ -10,7 +10,7 @@ TOKEN_ADDRESS = "EehwFP4EDzfXkz4Sz4wzHd4ydCJ2V7vCMEsh43iopump"
 TARGET_PRICE_UP = 0.00025
 TARGET_PRICE_DOWN = 0.000145
 CHECK_INTERVAL = 20  # เช็คทุก 20 วินาที
-SUMMARY_INTERVAL = 6 # ทุก 5 นาที (15 รอบ)
+SUMMARY_INTERVAL = 2 # ทุก 5 นาที (15 รอบ)
 
 count = 0
 print("🚀 บอทเริ่มเฝ้าราคาแบบต่อเนื่องแล้ว...")
