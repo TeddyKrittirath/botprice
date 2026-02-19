@@ -1,3 +1,11 @@
+import os  # เพิ่มการนำเข้า os เพื่อดึงค่าจากระบบ
+
+# ดึงค่าจาก Environment Variables ที่เราจะไปตั้งใน Render
+BOT_TOKEN = os.getenv("BOT_TOKEN")
+CHAT_ID = os.getenv("CHAT_ID")
+TOKEN_ADDRESS = os.getenv("TOKEN_ADDRESS")
+TARGET_PRICE_UP = float(os.getenv("TARGET_PRICE_UP", "0.00025"))
+TARGET_PRICE_DOWN = float(os.getenv("TARGET_PRICE_DOWN", "0.000145"))
 import http.server
 import socketserver
 import threading
