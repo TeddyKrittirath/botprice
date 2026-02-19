@@ -1,3 +1,20 @@
+import http.server
+import socketserver
+import threading
+
+# สร้าง Server หลอกๆ เพื่อให้ Render ไม่ปิดบอท
+def run_dummy_server():
+    handler = http.server.SimpleHTTPRequestHandler
+    with socketserver.TCPServer(("", 10000), handler) as httpd:
+        httpd.serve_forever()
+
+threading.Thread(target=run_dummy_server, daemon=True).start()
+
+# --- โค้ดเดิมของคุณเริ่มตรงนี้ ---
+import requests
+import time
+...
+
 import requests
 import time
 
